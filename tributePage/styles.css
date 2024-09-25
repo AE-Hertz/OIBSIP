@@ -1,0 +1,173 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: "Courier New", Courier, monospace;
+    background-color: #fdf6e3;
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    background-image: url("https://images.pexels.com/photos/1831234/pexels-photo-1831234.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-blend-mode: multiply;
+}
+
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-family: "Georgia", serif;
+    color: #5b3a29;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.image-container {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+}
+
+.tribute-image {
+    max-width: 100%;
+    border-radius: 10px;
+    filter: grayscale(100%);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    border: 2px solid #333;
+}
+
+.biography {
+    flex: 2;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-left: 2px solid #333;
+    border-right: 2px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: "Georgia", serif;
+}
+
+.biography h2 {
+    font-size: 2rem;
+    color: #5b3a29;
+    margin-bottom: 10px;
+    border-bottom: 2px dashed #333;
+}
+
+.biography h3 {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #5b3a29;
+}
+
+.biography p,
+.biography ul {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    align-items: center;
+}
+
+.biography ul li {
+    list-style: none;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.biography ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #333;
+    font-size: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+    border-top: 2px solid #333;
+    font-family: "Courier New", Courier, monospace;
+    margin-top: auto;
+}
+
+footer a{
+    text-decoration: none;
+    color: #333;
+}
+
+@media screen and (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .image-container {
+        margin-bottom: 20px;
+    }
+
+    .biography {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .tribute-image {
+        width: 100%;
+        max-width: none;
+        height: auto;
+        border-radius: 0;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .biography h2 {
+        font-size: 1.8rem;
+    }
+
+    .biography h3 {
+        font-size: 1.2rem;
+    }
+
+    footer {
+        font-size: 0.9rem;
+        padding: 15px;
+    }
+}
